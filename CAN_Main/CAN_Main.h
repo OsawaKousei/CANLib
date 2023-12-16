@@ -10,23 +10,24 @@
 #ifndef _CAN_MAIN_H_
 #define _CAN_MAIN_H_
 
-#include "CAN_AirCylinder_Def.h"
+#include "CAN_AirCylinder_Def.h" 
 #include "CAN_System_Def.h"
 #include "MCMD_CAN_Def.h"
 #include "CAN_Servo_Def.h"
 #include "main.h"
 
-#define CAN_TXBUFFER_SIZE	(512)
+#define CAN_TXBUFFER_SIZE (512) /*CAN送信用のバッファのサイズを指定(512) 
+通常、CAN通信ではデータの送信および受信にバッファが使用され、そのサイズを指定することが一般的です。 */
 
-#define AWAKE_CMD (0)
-#define FB_CMD (1)
+#define AWAKE_CMD (0) /*CAN通信のコマンドタイプを示す*/
+#define FB_CMD (1) /*同じくコマンドタイプを示す*/
 
 // User Setting Params : それぞれの基板数の設定
 #define NUM_OF_MCMD1		0
 #define NUM_OF_MCMD2		0
 #define NUM_OF_MCMD3		4
 #define NUM_OF_SERVO		0
-#define NUM_OF_AIR			1
+#define NUM_OF_AIR			1 
 //#define NUM_OF_UI			0
 #define NUM_OF_OTHER		0
 
